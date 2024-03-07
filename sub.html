@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download Notes website for various subjects">
+    <meta name="keywords" content="download, notes, science, hindi, english, sanskrit, maths">
+    <title>Download Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Fallback in case image fails */
+            position: relative;    
+            background-image: url('hhj.jpg'); 
+            background-repeat: no-repeat;  /* Prevent image from repeating */
+            background-size: cover;        /* Image covers whole background */
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        section h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        section p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        a.download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+        
+        a.download-button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .info-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        
+        .floating-window {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: none;
+        }
+        
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .back-button:hover {
+            background-color: #555;
+        }
+
+        /* Added CSS for responsiveness */
+        @media only screen and (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Download Notes</h1>
+        <nav>
+            <ul>
+                <li><a href="#science">Science</a></li>
+                <li><a href="#hindi">Hindi</a></li>
+                <li><a href="#english">English</a></li>
+                <li><a href="#sanskrit">Sanskrit</a></li>
+                <li><a href="#maths">Maths</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="info-icon" onclick="toggleFloatingWindow()" aria-label="Toggle Info">
+        <img src="info-icon.png" alt="Info" width="30" height="30">
+    </div>
+
+    <div class="floating-window" id="floatingWindow">
+        <h2>Owned by ADARSH vickey</h2>
+        <p>Email: none</p>
+        <p>Phone: 123-456-7890</p>
+        <button class="back-button" onclick="toggleFloatingWindow()">Back</button>
+    </div>
+
+    <section id="science">
+        <h2>Science Notes</h2>
+        <p>Description of science notes...</p>
+        <a href="science_notes.pdf" class="download-button" download onerror="alert('Error: Science notes not found')">Download Science Notes</a>
+    </section>
+
+    <section id="hindi">
+        <h2>Hindi Notes</h2>
+        <p>Description of Hindi notes...</p>
+        <a href="hindi_notes.pdf" class="download-button" download onerror="alert('Error: Hindi notes not found')">Download Hindi Notes</a>
+    </section>
+
+    <section id="english">
+        <h2>English Notes</h2>
+        <p>Description of English notes...</p>
+        <a href="english_notes.pdf" class="download-button" download onerror="alert('Error: English notes not found')">Download English Notes</a>
+    </section>
+
+    <section id="sanskrit">
+        <h2>Sanskrit Notes</h2>
+        <p>Description of Sanskrit notes...</p>
+        <a href="sanskrit_notes.pdf" class="download-button" download onerror="alert('Error: Sanskrit notes not found')">Download Sanskrit Notes</a>
+    </section>
+
+    <section id="maths">
+        <h2>Maths Notes</h2>
+        <p>Description of Maths notes...</p>
+        <a href="maths_notes.pdf" class="download-button" download onerror="alert('Error: Maths notes not found')">Download Maths Notes</a>
+    </section>
+
+    <script>
+        function toggleFloatingWindow() {
+            var floatingWindow = document.getElementById('floatingWindow');
+            if (floatingWindow.style.display === 'none' || floatingWindow.style.display === '') {
+                floatingWindow.style.display = 'block';
+            } else {
+                floatingWindow.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
